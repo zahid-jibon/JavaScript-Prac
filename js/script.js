@@ -30,3 +30,57 @@ const sum = ()=>{
  const back = ()=>(
     document.getElementById("title").style.display="none"
  );
+
+
+ // Functiion
+ function MyFunction(a, b){
+   return a * b
+ };
+
+ document.getElementById("func").innerHTML= MyFunction(2,3);
+
+
+//  Object
+
+const person = {
+   firstName : "Zahid",
+   lastName : "Hossain",
+   age : 23,
+   gmail: "zahid10397@gmail.com",
+   fullDetails: function (){
+      return this.firstName+" "+this.lastName+" "+this.age+" "+this.gmail;
+   }
+};
+
+document.getElementById("obj").innerHTML = "My details is: " + person.fullDetails();
+
+
+// Arrays
+const fruit = [
+   "Banana",
+   "Apple",
+   "Mango",
+   "Lichi"
+];
+
+document.getElementById("arrays").innerHTML= `The fruits are: ${fruit}`;
+
+
+// Class
+class MyClass{
+   constructor(name, age){
+      this.name = name;
+      this.age = age;
+   };
+   year(x){
+      return x - this.age;
+   };
+};
+
+let date = new Date();  
+let age = date.getFullYear();
+
+let myClass = new MyClass("Zahid Hossain", 1999);
+
+document.getElementById("cls").innerHTML= "My name is: "+ myClass.name ;
+document.getElementById("cls1").innerHTML= "I am only "+ myClass.year(age)+ " years old.";
