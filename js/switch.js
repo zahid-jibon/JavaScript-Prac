@@ -1,6 +1,6 @@
 
 
-var num = 32;
+var num = 60;
 
 switch(num){
     case 69:
